@@ -34,13 +34,3 @@ class GameCenterHelperVC: UIViewController{
     }
 }
 
-struct GameCenterAuthView:UIViewControllerRepresentable {
-    
-    func makeUIViewController(context: Context) -> UIViewController {
-        let vc = GameCenterHelperVC()
-        return vc
-    }
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        
-    }
-}
