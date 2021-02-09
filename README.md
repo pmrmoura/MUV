@@ -47,9 +47,8 @@
 <img src="assets/select.png" alt="Logo" width="187.5" height="406">
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Swift](https://swift.org/)
-* [SceneKit](https://developer.apple.com/documentation/scenekit/)
+* [SensorKit](https://developer.apple.com/documentation/sensorkit)
 
 <!-- Git Flow -->
 ## Git Flow
