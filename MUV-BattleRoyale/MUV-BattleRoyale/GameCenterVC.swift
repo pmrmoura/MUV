@@ -9,9 +9,11 @@ import Foundation
 import GameKit
 import SwiftUI
 
-class GameCenterHelperVC: UIViewController,GKLocalPlayerListener{
+class GameCenterHelperVC: UIViewController,GKLocalPlayerListener, GKMatchDelegate{
     
     private let inviteMessage = "Let's play"
+    private var currentVC: GKMatchmakerViewController?
+    private var match:GKMatch?
     
     var isAuthenticated:Bool{
         return GKLocalPlayer.local.isAuthenticated
@@ -46,6 +48,7 @@ class GameCenterHelperVC: UIViewController,GKLocalPlayerListener{
         }
         
         vc.matchmakerDelegate = self
+        currentVC = vc
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -61,7 +64,7 @@ class GameCenterHelperVC: UIViewController,GKLocalPlayerListener{
     
     private func createRequest() -> GKMatchRequest {
         let request = GKMatchRequest()
-        request.minPlayers = 3
+        request.minPlayers = 2
         request.maxPlayers = 10
         request.inviteMessage = inviteMessage
         
@@ -82,12 +85,15 @@ extension GameCenterHelperVC:GKMatchmakerViewControllerDelegate{
     
     func matchmakerViewController(_ viewController: GKMatchmakerViewController, didFind match: GKMatch) {
         viewController.dismiss(animated: true, completion: nil)
+        self.match = match
+        self.match?.delegate = self
         let vc = UIViewController()
         vc.view.backgroundColor = .blue
         self.present(vc, animated: true, completion: nil)
     }
     
-    func player(_ player: GKPlayer, didAccept invite: GKInvite) {
-    }
+    /*func player(_ player: GKPlayer, didAccept invite: GKInvite) {
+        print("INVITIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII7777777777777777777777777777777777")
+    }*/
     
 }
