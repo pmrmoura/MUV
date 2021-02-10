@@ -17,6 +17,8 @@
 		C1AE766925D42BAD008B70ED /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE766825D42BAD008B70ED /* BackgroundView.swift */; };
 		C1D6161825D403DF00DB8B58 /* ChampionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6161725D403DF00DB8B58 /* ChampionModel.swift */; };
 		C1D6161D25D420E300DB8B58 /* ConfirmSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */; };
+		C1E0A0AF25D4560B00B5F839 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C1E0A0AE25D4560B00B5F839 /* GameScene.sks */; };
+		C1E0A0B725D459C900B5F839 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0A0B625D459C900B5F839 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C1AE766825D42BAD008B70ED /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		C1D6161725D403DF00DB8B58 /* ChampionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionModel.swift; sourceTree = "<group>"; };
 		C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSelection.swift; sourceTree = "<group>"; };
+		C1E0A0AE25D4560B00B5F839 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		C1E0A0B625D459C900B5F839 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 				285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */,
 				285D0C8925D2BFC2002990C1 /* AuthenticationView.swift */,
 				C1D6161725D403DF00DB8B58 /* ChampionModel.swift */,
+				C1E0A0AE25D4560B00B5F839 /* GameScene.sks */,
 			);
 			path = "MUV-BattleRoyale";
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				285D0C7325D2B82B002990C1 /* ContentView.swift */,
 				C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */,
 				C1AE766825D42BAD008B70ED /* BackgroundView.swift */,
+				C1E0A0B625D459C900B5F839 /* Game.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				285D0C7925D2B82C002990C1 /* Preview Assets.xcassets in Resources */,
+				C1E0A0AF25D4560B00B5F839 /* GameScene.sks in Resources */,
 				285D0C7625D2B82C002990C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				285D0C8625D2BAB2002990C1 /* GameCenterVC.swift in Sources */,
+				C1E0A0B725D459C900B5F839 /* Game.swift in Sources */,
 				C1D6161825D403DF00DB8B58 /* ChampionModel.swift in Sources */,
 				285D0C7425D2B82B002990C1 /* ContentView.swift in Sources */,
 				C1AE766925D42BAD008B70ED /* BackgroundView.swift in Sources */,
