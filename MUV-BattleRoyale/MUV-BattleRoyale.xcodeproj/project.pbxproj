@@ -14,6 +14,9 @@
 		285D0C8425D2B90A002990C1 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285D0C8325D2B90A002990C1 /* GameKit.framework */; };
 		285D0C8625D2BAB2002990C1 /* GameCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */; };
 		285D0C8A25D2BFC2002990C1 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D0C8925D2BFC2002990C1 /* AuthenticationView.swift */; };
+		C1AE766925D42BAD008B70ED /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE766825D42BAD008B70ED /* BackgroundView.swift */; };
+		C1D6161825D403DF00DB8B58 /* ChampionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6161725D403DF00DB8B58 /* ChampionModel.swift */; };
+		C1D6161D25D420E300DB8B58 /* ConfirmSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		285D0C8325D2B90A002990C1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterVC.swift; sourceTree = "<group>"; };
 		285D0C8925D2BFC2002990C1 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		C1AE766825D42BAD008B70ED /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		C1D6161725D403DF00DB8B58 /* ChampionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionModel.swift; sourceTree = "<group>"; };
+		C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +66,14 @@
 		285D0C7025D2B82B002990C1 /* MUV-BattleRoyale */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6161B25D420D500DB8B58 /* Views */,
 				285D0C7125D2B82B002990C1 /* MUV_BattleRoyaleApp.swift */,
-				285D0C7325D2B82B002990C1 /* ContentView.swift */,
 				285D0C7525D2B82C002990C1 /* Assets.xcassets */,
 				285D0C7A25D2B82C002990C1 /* Info.plist */,
 				285D0C7725D2B82C002990C1 /* Preview Content */,
 				285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */,
 				285D0C8925D2BFC2002990C1 /* AuthenticationView.swift */,
+				C1D6161725D403DF00DB8B58 /* ChampionModel.swift */,
 			);
 			path = "MUV-BattleRoyale";
 			sourceTree = "<group>";
@@ -85,6 +92,16 @@
 				285D0C8325D2B90A002990C1 /* GameKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1D6161B25D420D500DB8B58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				285D0C7325D2B82B002990C1 /* ContentView.swift */,
+				C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */,
+				C1AE766825D42BAD008B70ED /* BackgroundView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				285D0C8625D2BAB2002990C1 /* GameCenterVC.swift in Sources */,
+				C1D6161825D403DF00DB8B58 /* ChampionModel.swift in Sources */,
 				285D0C7425D2B82B002990C1 /* ContentView.swift in Sources */,
+				C1AE766925D42BAD008B70ED /* BackgroundView.swift in Sources */,
 				285D0C7225D2B82B002990C1 /* MUV_BattleRoyaleApp.swift in Sources */,
 				285D0C8A25D2BFC2002990C1 /* AuthenticationView.swift in Sources */,
+				C1D6161D25D420E300DB8B58 /* ConfirmSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +309,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MUV-BattleRoyale/Preview Content\"";
-				DEVELOPMENT_TEAM = UM7BRLPWKH;
+				DEVELOPMENT_TEAM = 2529YUQTU2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MUV-BattleRoyale/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -297,7 +317,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MUV-BattleRoyale";
+				PRODUCT_BUNDLE_IDENTIFIER = muv.games;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,7 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MUV-BattleRoyale/Preview Content\"";
-				DEVELOPMENT_TEAM = UM7BRLPWKH;
+				DEVELOPMENT_TEAM = 2529YUQTU2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MUV-BattleRoyale/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -319,7 +339,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MUV-BattleRoyale";
+				PRODUCT_BUNDLE_IDENTIFIER = muv.games;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
