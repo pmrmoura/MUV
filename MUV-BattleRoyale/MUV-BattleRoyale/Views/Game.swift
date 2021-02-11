@@ -8,19 +8,36 @@
 import SwiftUI
 import SpriteKit
 
-struct Game: View {
+class GameSceneLoader: ObservableObject{
+   
     
-    var scene: SKScene {
-        let scene = SKScene(fileNamed: "GameScene.sks")
-        scene?.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-//        scene?.scaleMode = .resizeFill
-        return scene!
+    
+    @Published var scene : GameScene
+    
+    @Published var buttonIsDisabled = true
+    init(){
+        
+        let scene = GameScene(fileNamed: "GameScene")
+        
+        
+        self.scene = scene!
+        self.scene.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
     
+}
+
+struct Game: View {
+    @ObservedObject
+    var loader = GameSceneLoader()
     var body: some View {
-        SpriteView(scene: scene)
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            .edgesIgnoringSafeArea(.all)
+        ZStack {
+            SpriteView(scene: loader.scene)
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    .edgesIgnoringSafeArea(.all)
+            if loader.scene.motionManager.orientation != "" {
+                Text(loader.scene.motionManager.orientation)
+            }
+        }
     }
 }
 

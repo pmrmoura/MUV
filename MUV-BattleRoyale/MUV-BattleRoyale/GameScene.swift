@@ -7,7 +7,7 @@
 
 import Foundation
 import SpriteKit
-
+import SwiftUI
 class actionRow{
     public let frontWalk = 9
     public let backWalk = 11
@@ -65,9 +65,12 @@ class SpriteSheet {
 class GameScene: SKScene {
     var player = SKNode()
     let cameraNode = SKCameraNode()
+    @ObservedObject
+    var motionManager: MotionManager = MotionManager()
     let sheet = SpriteSheet(texture: SKTexture(imageNamed: "NatchiSS"), rows: 21, columns: 13, spacing: 0, margin: 0)
     let rowGuide = actionRow()
     let columnGuide = actionRowLen()
+    var previousTime = 0.0
     override func didMove(to view: SKView) {
         player = self.childNode(withName: "player")!
         let texture = sheet.textureForColumn(column: 0, row: rowGuide.frontWalk)!
@@ -83,16 +86,24 @@ class GameScene: SKScene {
         let act = SKAction.move(to: CGPoint(x: location!.x, y: self.player.position.y), duration: 0.5)
         player.removeAllActions()
         player.run(act)
-        
+
         if(location!.x > self.player.position.x){
             player.run(frontWalk())
         }
-        
+
         if(location!.x < self.player.position.x){
             player.run(backWalk())
         }
         let cameraAct = SKAction.move(to: CGPoint(x: location!.x, y: (self.camera?.position.y)!), duration: 0.8)
         self.camera?.run(cameraAct)
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        if (self.previousTime == 0 || abs(Double(currentTime) - Double(previousTime)) >= 0.5) {
+            self.previousTime = Double(currentTime)
+            self.player.run(self.wideArmsDance())
+            print(self.motionManager.orientation)
+        }
     }
     
     func frontWalk() -> SKAction{
@@ -128,6 +139,6 @@ class GameScene: SKScene {
         }
         let texture = sheet.textureForColumn(column: 0, row: rowGuide.wideArmsDanceMove)!
         textureArray.append(texture)
-        return SKAction.repeat(SKAction.animate(with: textureArray, timePerFrame: 0.05), count: 5)
+        return SKAction.animate(with: textureArray, timePerFrame: 0.05)
     }
 }
