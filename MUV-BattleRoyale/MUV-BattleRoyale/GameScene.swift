@@ -65,11 +65,10 @@ class SpriteSheet {
 class GameScene: SKScene {
     var player = SKNode()
     let cameraNode = SKCameraNode()
-    //var motionManager:MotionManager = MotionManager()
-    let sheet = SpriteSheet(texture: SKTexture(imageNamed: "NatchiSS"), rows: 21, columns: 13, spacing: 0, margin: 0)
     let rowGuide = actionRow()
     let columnGuide = actionRowLen()
     var previousTime = 0.0
+    var sheet: SpriteSheet = SpriteSheet(texture: SKTexture(imageNamed: "AllukaFile"), rows: 21, columns: 13, spacing: 0, margin: 0)
     override func didMove(to view: SKView) {
         player = self.childNode(withName: "player")!
         let texture = sheet.textureForColumn(column: 0, row: rowGuide.frontWalk)!
@@ -95,6 +94,13 @@ class GameScene: SKScene {
         }
         let cameraAct = SKAction.move(to: CGPoint(x: location!.x, y: (self.camera?.position.y)!), duration: 0.8)
         self.camera?.run(cameraAct)
+    }
+    
+    func setSpriteSheet(fileName: String) {
+        let sheet = SpriteSheet(texture: SKTexture(imageNamed: fileName), rows: 21, columns: 13, spacing: 0, margin: 0)
+        self.sheet = sheet
+        let texture = self.sheet.textureForColumn(column: 0, row: rowGuide.frontWalk)!
+        self.player.run(SKAction.setTexture(texture))
     }
     
     override func update(_ currentTime: TimeInterval) {

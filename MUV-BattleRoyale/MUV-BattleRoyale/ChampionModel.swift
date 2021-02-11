@@ -12,4 +12,5 @@ struct Champion: Hashable {
     var background: String
     var picture: String
     var type: String
+    var file: String
 }

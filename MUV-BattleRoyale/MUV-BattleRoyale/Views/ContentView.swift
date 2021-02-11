@@ -27,10 +27,10 @@ struct ContentView_Previews: PreviewProvider {
 
 struct MainView: View {
     var champions: [Champion] = [
-        Champion(name: "Natchi Mágica", background: "BackgroundNatchi", picture: "NatchiPic", type: "Bruxa"),
-        Champion(name: "Alluka", background: "BackgroundAlluka", picture: "AllukaPic", type: "Espadachin"),
-        Champion(name: "José Gomes", background: "BackgroundJose", picture: "JosePic", type: "Normal"),
-        Champion(name: "Erou", background: "BackgroundErou", picture: "ErouPic", type: "Arqueiro"),
+        Champion(name: "Natchi Mágica", background: "BackgroundNatchi", picture: "NatchiPic", type: "Bruxa", file: "NatchiFile"),
+        Champion(name: "Alluka", background: "BackgroundAlluka", picture: "AllukaPic", type: "Espadachin", file: "AllukaFile"),
+        Champion(name: "José Gomes", background: "BackgroundJose", picture: "JosePic", type: "Normal", file: "JoseFile"),
+        Champion(name: "Erou", background: "BackgroundErou", picture: "ErouPic", type: "Arqueiro", file: "ErouFile"),
     ]
 
     var columns: [GridItem] =

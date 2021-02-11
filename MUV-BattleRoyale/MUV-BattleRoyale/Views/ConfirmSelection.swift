@@ -10,33 +10,33 @@ import SwiftUI
 struct ConfirmSelection: View {
     var champion: Champion
     var body: some View {
-        ZStack {
-            BackgroundView()
-            
-            VStack {
-                Text(champion.name)
-                    .font(.system(size: 32, weight: .bold, design: .default))
-                    .foregroundColor(.white)
+            ZStack {
+                BackgroundView()
+                
+                VStack {
+                    Text(champion.name)
+                        .font(.system(size: 32, weight: .bold, design: .default))
+                        .foregroundColor(.white)
 
-                Text(champion.type)
-                    .font(.system(size: 24, weight: .medium, design: .default))
-                    .foregroundColor(.white)
-                
-                Spacer()
-                
-                ChampionView(champion: champion)
-                
-                Spacer()
-                
-                ConfirmButton()
+                    Text(champion.type)
+                        .font(.system(size: 24, weight: .medium, design: .default))
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    ChampionView(champion: champion)
+                    
+                    Spacer()
+                    
+                    ConfirmButton(champion: champion)
+                }
             }
-        }
     }
 }
 
 struct ConfirmSelection_Previews: PreviewProvider {
     static var previews: some View {
-        ConfirmSelection(champion: Champion(name: "Natchi Mágica", background: "BackgroundNatchi", picture: "NatchiPic", type: "Bruxa"))
+        ConfirmSelection(champion: Champion(name: "Natchi Mágica", background: "BackgroundNatchi", picture: "NatchiPic", type: "Bruxa", file: "NatchiFile"))
     }
 }
 
@@ -62,17 +62,21 @@ private struct ChampionView: View {
 }
 
 struct ConfirmButton: View {
+    var champion: Champion
     var body: some View {
-        Button{
-            print("confirmou")
-        } label: {
-            Text("Buscar partida")
-                .frame(width: 315, height: 60)
-                .background(Color.white)
-                .foregroundColor(.black)
-                .font(.system(size: 20, weight: .bold, design: .default))
-                .cornerRadius(10)
-                .padding(.bottom, 42)
+        VStack {
+            NavigationLink(
+                destination: Game(champion: champion)) {
+                Text("Buscar partida")
+                    .frame(width: 315, height: 60)
+                    .background(Color.white)
+                    .foregroundColor(.black)
+                    .font(.system(size: 20, weight: .bold, design: .default))
+                    .cornerRadius(10)
+                    .padding(.bottom, 42)
+                .frame(width: 150, height: 180, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .padding()
+            }
         }
     }
 }

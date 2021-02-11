@@ -9,23 +9,22 @@ import SwiftUI
 import SpriteKit
 
 class GameSceneLoader: ObservableObject{
-    
-    
-    
     @Published var scene : GameScene
-    
+//    var spriteSheetName: String = ""
     init(){
         
         let scene = GameScene(fileNamed: "GameScene")
-        
-        
+//        scene?.setSpriteSheet(fileName: self.spriteSheetName)
         self.scene = scene!
         self.scene.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        
+//        self.spriteSheetName = spriteSheetName
     }
-    
 }
 
 struct Game: View {
+    var champion: Champion
+
     @ObservedObject var loader = GameSceneLoader()
     @ObservedObject var motion = MotionManager()
     
@@ -60,6 +59,6 @@ struct Game: View {
 
 struct Game_Previews: PreviewProvider {
     static var previews: some View {
-        Game()
+        Game(champion: Champion(name: "Natchi Mágica", background: "BackgroundNatchi", picture: "NatchiPic", type: "Bruxa", file: "NatchiFile"))
     }
 }
