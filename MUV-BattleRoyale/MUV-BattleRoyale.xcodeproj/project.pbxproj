@@ -13,6 +13,8 @@
 		285D0C7925D2B82C002990C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285D0C7825D2B82C002990C1 /* Preview Assets.xcassets */; };
 		285D0C8425D2B90A002990C1 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285D0C8325D2B90A002990C1 /* GameKit.framework */; };
 		285D0C8625D2BAB2002990C1 /* GameCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */; };
+		CB0E531A25D42CB500A063FF /* AccelerometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0E531925D42CB500A063FF /* AccelerometerView.swift */; };
+		CB0E531E25D431A100A063FF /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0E531D25D431A100A063FF /* MotionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		285D0C7A25D2B82C002990C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285D0C8325D2B90A002990C1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterVC.swift; sourceTree = "<group>"; };
+		CB0E531925D42CB500A063FF /* AccelerometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerView.swift; sourceTree = "<group>"; };
+		CB0E531D25D431A100A063FF /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				285D0C7A25D2B82C002990C1 /* Info.plist */,
 				285D0C7725D2B82C002990C1 /* Preview Content */,
 				285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */,
+				CB0E531925D42CB500A063FF /* AccelerometerView.swift */,
+				CB0E531D25D431A100A063FF /* MotionManager.swift */,
 			);
 			path = "MUV-BattleRoyale";
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0E531A25D42CB500A063FF /* AccelerometerView.swift in Sources */,
+				CB0E531E25D431A100A063FF /* MotionManager.swift in Sources */,
 				285D0C8625D2BAB2002990C1 /* GameCenterVC.swift in Sources */,
 				285D0C7425D2B82B002990C1 /* PreGameView.swift in Sources */,
 				285D0C7225D2B82B002990C1 /* MUV_BattleRoyaleApp.swift in Sources */,
@@ -288,7 +296,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MUV-BattleRoyale/MUV-BattleRoyale.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MUV-BattleRoyale/Preview Content\"";
-				DEVELOPMENT_TEAM = UM7BRLPWKH;
+				DEVELOPMENT_TEAM = R4QUMDS8VW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MUV-BattleRoyale/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -296,7 +304,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MUV-BattleRoyale";
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MUV-BattleRoyalea";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,7 +319,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MUV-BattleRoyale/MUV-BattleRoyale.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MUV-BattleRoyale/Preview Content\"";
-				DEVELOPMENT_TEAM = UM7BRLPWKH;
+				DEVELOPMENT_TEAM = R4QUMDS8VW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MUV-BattleRoyale/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -319,7 +327,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MUV-BattleRoyale";
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MUV-BattleRoyalea";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

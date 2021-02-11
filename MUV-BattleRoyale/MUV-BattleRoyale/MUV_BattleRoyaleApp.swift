@@ -11,7 +11,7 @@ import SwiftUI
 struct MUV_BattleRoyaleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AccelerometerView(motion: MotionManager())
         }
     }
 }
