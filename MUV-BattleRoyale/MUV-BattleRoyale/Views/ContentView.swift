@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     var body: some View {
         NavigationView {
             MainView()
@@ -68,13 +67,6 @@ struct TitleView: View {
 
 private struct ChampionView: View {
     var champion: Champion
-
-    enum PushedItem: String {
-        case selectChampion
-        case confirmSelection
-    }
-
-    @State var isChampionSelected: PushedItem? = .selectChampion
 
     var body: some View {
         VStack {

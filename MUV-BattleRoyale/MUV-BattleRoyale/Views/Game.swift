@@ -10,22 +10,26 @@ import SpriteKit
 
 class GameSceneLoader: ObservableObject{
     @Published var scene : GameScene
-//    var spriteSheetName: String = ""
-    init(){
+    var spriteSheetName: String = ""
+    init(spriteSheetName: String){
         
         let scene = GameScene(fileNamed: "GameScene")
-//        scene?.setSpriteSheet(fileName: self.spriteSheetName)
         self.scene = scene!
         self.scene.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         
-//        self.spriteSheetName = spriteSheetName
+        self.spriteSheetName = spriteSheetName
+        self.scene.setSpriteSheet(fileName: self.spriteSheetName)
     }
 }
 
 struct Game: View {
     var champion: Champion
-
-    @ObservedObject var loader = GameSceneLoader()
+    @ObservedObject var loader: GameSceneLoader
+    
+    init(champion: Champion) {
+        self.champion = champion
+        self.loader = GameSceneLoader(spriteSheetName: champion.file)
+    }
     @ObservedObject var motion = MotionManager()
     
     var body: some View {
