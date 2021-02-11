@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		285AAE5E25D4684A0058162F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285AAE5D25D4684A0058162F /* GameScene.swift */; };
 		285D0C7225D2B82B002990C1 /* MUV_BattleRoyaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D0C7125D2B82B002990C1 /* MUV_BattleRoyaleApp.swift */; };
 		285D0C7425D2B82B002990C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D0C7325D2B82B002990C1 /* ContentView.swift */; };
 		285D0C7625D2B82C002990C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285D0C7525D2B82C002990C1 /* Assets.xcassets */; };
 		285D0C7925D2B82C002990C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285D0C7825D2B82C002990C1 /* Preview Assets.xcassets */; };
 		285D0C8425D2B90A002990C1 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285D0C8325D2B90A002990C1 /* GameKit.framework */; };
-		285D0C8625D2BAB2002990C1 /* GameCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */; };
-		285D0C8A25D2BFC2002990C1 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D0C8925D2BFC2002990C1 /* AuthenticationView.swift */; };
 		C1AE766925D42BAD008B70ED /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE766825D42BAD008B70ED /* BackgroundView.swift */; };
 		C1D6161825D403DF00DB8B58 /* ChampionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6161725D403DF00DB8B58 /* ChampionModel.swift */; };
 		C1D6161D25D420E300DB8B58 /* ConfirmSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */; };
@@ -22,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		285AAE5D25D4684A0058162F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		285D0C6E25D2B82B002990C1 /* MUV-BattleRoyale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MUV-BattleRoyale.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		285D0C7125D2B82B002990C1 /* MUV_BattleRoyaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUV_BattleRoyaleApp.swift; sourceTree = "<group>"; };
 		285D0C7325D2B82B002990C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,8 +29,6 @@
 		285D0C7825D2B82C002990C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		285D0C7A25D2B82C002990C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285D0C8325D2B90A002990C1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterVC.swift; sourceTree = "<group>"; };
-		285D0C8925D2BFC2002990C1 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		C1AE766825D42BAD008B70ED /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		C1D6161725D403DF00DB8B58 /* ChampionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionModel.swift; sourceTree = "<group>"; };
 		C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSelection.swift; sourceTree = "<group>"; };
@@ -75,10 +73,9 @@
 				285D0C7525D2B82C002990C1 /* Assets.xcassets */,
 				285D0C7A25D2B82C002990C1 /* Info.plist */,
 				285D0C7725D2B82C002990C1 /* Preview Content */,
-				285D0C8525D2BAB2002990C1 /* GameCenterVC.swift */,
-				285D0C8925D2BFC2002990C1 /* AuthenticationView.swift */,
 				C1D6161725D403DF00DB8B58 /* ChampionModel.swift */,
 				C1E0A0AE25D4560B00B5F839 /* GameScene.sks */,
+				285AAE5D25D4684A0058162F /* GameScene.swift */,
 			);
 			path = "MUV-BattleRoyale";
 			sourceTree = "<group>";
@@ -180,13 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				285D0C8625D2BAB2002990C1 /* GameCenterVC.swift in Sources */,
 				C1E0A0B725D459C900B5F839 /* Game.swift in Sources */,
 				C1D6161825D403DF00DB8B58 /* ChampionModel.swift in Sources */,
 				285D0C7425D2B82B002990C1 /* ContentView.swift in Sources */,
 				C1AE766925D42BAD008B70ED /* BackgroundView.swift in Sources */,
 				285D0C7225D2B82B002990C1 /* MUV_BattleRoyaleApp.swift in Sources */,
-				285D0C8A25D2BFC2002990C1 /* AuthenticationView.swift in Sources */,
+				285AAE5E25D4684A0058162F /* GameScene.swift in Sources */,
 				C1D6161D25D420E300DB8B58 /* ConfirmSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
