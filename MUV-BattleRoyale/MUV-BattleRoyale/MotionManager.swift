@@ -24,11 +24,11 @@ class MotionManager:ObservableObject{
     var multiplierHorizontal: Double = 1.5
     //@Published
     var multiplierVertical: Double = 1.5
-    //@Published
+    @Published
     var score: Double = 0.0
     //@Published
     var moveOrientation: String = ""
-    @Published var orientation: String = ""
+    @Published var orientation: String = "Horizontal"
     
     init() {
         self.motionManager = CMMotionManager()
@@ -39,25 +39,25 @@ class MotionManager:ObservableObject{
                 self.y = accelerometerData.acceleration.y
                 self.z = accelerometerData.acceleration.z
                 
-                if(abs(self.x)>1.6){ //horizontal
+                if(abs(self.x)>1.3){ //horizontal
                     self.score = self.score + (abs(self.x) * self.multiplierHorizontal);
                     self.moveOrientation = "horizontal"
                     print("horizontal")
                 }
-                if(abs(self.y)>1.6){//vertical
+                if(abs(self.y)>1.3){//vertical
                     self.score = self.score + (abs(self.y) * self.multiplierVertical);
                     self.moveOrientation = "vertical"
                     print("vertical")
                 }
                 
-                if(abs(self.z)>1.6){
+                if(abs(self.z)>1.3){
                     self.score = self.score + (abs(self.z) * 2.0);
 //                    self.movesCount+=1;
                 }
             }
 
         }
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { timer in
             self.doubleEffect();
         }
     }

@@ -317,7 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MUV-BattleRoyale/Preview Content\"";
-				DEVELOPMENT_TEAM = UM7BRLPWKH;
+				DEVELOPMENT_TEAM = 2529YUQTU2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MUV-BattleRoyale/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -325,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = muv.games.memes;
+				PRODUCT_BUNDLE_IDENTIFIER = muv.games2.memes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MUV-BattleRoyale/Preview Content\"";
-				DEVELOPMENT_TEAM = UM7BRLPWKH;
+				DEVELOPMENT_TEAM = 2529YUQTU2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MUV-BattleRoyale/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -347,7 +347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = muv.games.memes;
+				PRODUCT_BUNDLE_IDENTIFIER = muv.games2.memes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
