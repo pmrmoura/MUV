@@ -13,10 +13,10 @@
 		285D0C7625D2B82C002990C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285D0C7525D2B82C002990C1 /* Assets.xcassets */; };
 		285D0C7925D2B82C002990C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285D0C7825D2B82C002990C1 /* Preview Assets.xcassets */; };
 		285D0C8425D2B90A002990C1 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285D0C8325D2B90A002990C1 /* GameKit.framework */; };
+		28E102AB25D57A8500383701 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E102AA25D57A8500383701 /* MotionManager.swift */; };
 		C1AE766925D42BAD008B70ED /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE766825D42BAD008B70ED /* BackgroundView.swift */; };
 		C1D6161825D403DF00DB8B58 /* ChampionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6161725D403DF00DB8B58 /* ChampionModel.swift */; };
 		C1D6161D25D420E300DB8B58 /* ConfirmSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */; };
-		C1DE581A25D55E3E00646F09 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE581925D55E3E00646F09 /* MotionManager.swift */; };
 		C1E0A0AF25D4560B00B5F839 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C1E0A0AE25D4560B00B5F839 /* GameScene.sks */; };
 		C1E0A0B725D459C900B5F839 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0A0B625D459C900B5F839 /* Game.swift */; };
 /* End PBXBuildFile section */
@@ -30,10 +30,10 @@
 		285D0C7825D2B82C002990C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		285D0C7A25D2B82C002990C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285D0C8325D2B90A002990C1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		28E102AA25D57A8500383701 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		C1AE766825D42BAD008B70ED /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		C1D6161725D403DF00DB8B58 /* ChampionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionModel.swift; sourceTree = "<group>"; };
 		C1D6161C25D420E300DB8B58 /* ConfirmSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSelection.swift; sourceTree = "<group>"; };
-		C1DE581925D55E3E00646F09 /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionManager.swift; path = "../../../../../Downloads/MUV-accelerometerfeature/MUV-BattleRoyale/MUV-BattleRoyale/MotionManager.swift"; sourceTree = "<group>"; };
 		C1E0A0AE25D4560B00B5F839 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		C1E0A0B625D459C900B5F839 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +78,7 @@
 				C1D6161725D403DF00DB8B58 /* ChampionModel.swift */,
 				C1E0A0AE25D4560B00B5F839 /* GameScene.sks */,
 				285AAE5D25D4684A0058162F /* GameScene.swift */,
-				C1DE581925D55E3E00646F09 /* MotionManager.swift */,
+				28E102AA25D57A8500383701 /* MotionManager.swift */,
 			);
 			path = "MUV-BattleRoyale";
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 				285D0C7225D2B82B002990C1 /* MUV_BattleRoyaleApp.swift in Sources */,
 				285AAE5E25D4684A0058162F /* GameScene.swift in Sources */,
 				C1D6161D25D420E300DB8B58 /* ConfirmSelection.swift in Sources */,
-				C1DE581A25D55E3E00646F09 /* MotionManager.swift in Sources */,
+				28E102AB25D57A8500383701 /* MotionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MUV-BattleRoyale/Preview Content\"";
-				DEVELOPMENT_TEAM = 2529YUQTU2;
+				DEVELOPMENT_TEAM = UM7BRLPWKH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MUV-BattleRoyale/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -325,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = muv.games;
+				PRODUCT_BUNDLE_IDENTIFIER = muv.games.memes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MUV-BattleRoyale/Preview Content\"";
-				DEVELOPMENT_TEAM = 2529YUQTU2;
+				DEVELOPMENT_TEAM = UM7BRLPWKH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MUV-BattleRoyale/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -347,7 +347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = muv.games;
+				PRODUCT_BUNDLE_IDENTIFIER = muv.games.memes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

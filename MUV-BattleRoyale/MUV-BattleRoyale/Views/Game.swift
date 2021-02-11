@@ -9,12 +9,11 @@ import SwiftUI
 import SpriteKit
 
 class GameSceneLoader: ObservableObject{
-   
+    
     
     
     @Published var scene : GameScene
     
-    @Published var buttonIsDisabled = true
     init(){
         
         let scene = GameScene(fileNamed: "GameScene")
@@ -27,19 +26,19 @@ class GameSceneLoader: ObservableObject{
 }
 
 struct Game: View {
-    @ObservedObject
-    var loader = GameSceneLoader()
+    @ObservedObject var loader = GameSceneLoader()
+    @ObservedObject var motion = MotionManager()
+    
     var body: some View {
         ZStack {
             SpriteView(scene: loader.scene)
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                    .edgesIgnoringSafeArea(.all)
-            if loader.scene.motionManager.orientation != "" {
-                Text(loader.scene.motionManager.orientation)
-            }
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .edgesIgnoringSafeArea(.all)
+            Text(motion.orientation)
         }
     }
 }
+
 
 struct Game_Previews: PreviewProvider {
     static var previews: some View {

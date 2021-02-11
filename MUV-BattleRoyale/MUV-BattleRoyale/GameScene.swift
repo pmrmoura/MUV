@@ -65,8 +65,7 @@ class SpriteSheet {
 class GameScene: SKScene {
     var player = SKNode()
     let cameraNode = SKCameraNode()
-    @ObservedObject
-    var motionManager: MotionManager = MotionManager()
+    //var motionManager:MotionManager = MotionManager()
     let sheet = SpriteSheet(texture: SKTexture(imageNamed: "NatchiSS"), rows: 21, columns: 13, spacing: 0, margin: 0)
     let rowGuide = actionRow()
     let columnGuide = actionRowLen()
@@ -102,7 +101,7 @@ class GameScene: SKScene {
         if (self.previousTime == 0 || abs(Double(currentTime) - Double(previousTime)) >= 0.5) {
             self.previousTime = Double(currentTime)
             self.player.run(self.wideArmsDance())
-            print(self.motionManager.orientation)
+            //print(self.motionManager.orientation)
         }
     }
     

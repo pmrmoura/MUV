@@ -10,26 +10,26 @@ import Combine
 import CoreMotion
 import AudioToolbox
 
-class MotionManager: ObservableObject {
+class MotionManager:ObservableObject{
 
-    private var motionManager: CMMotionManager
+    private var motionManager:CMMotionManager
 
-    @Published
+    //@Published
     var x: Double = 0.0
-    @Published
+    //@Published
     var y: Double = 0.0
-    @Published
+    //@Published
     var z: Double = 0.0
-    @Published
+    //@Published
     var multiplierHorizontal: Double = 1.5
-    @Published
+    //@Published
     var multiplierVertical: Double = 1.5
-    @Published
+    //@Published
     var score: Double = 0.0
-    @Published
-    var movesCount: Int = 0
-    @Published
-    var orientation: String = ""
+    //@Published
+    var moveOrientation: String = ""
+    @Published var orientation: String = ""
+    
     init() {
         self.motionManager = CMMotionManager()
         self.motionManager.accelerometerUpdateInterval = 0.1
@@ -41,23 +41,23 @@ class MotionManager: ObservableObject {
                 
                 if(abs(self.x)>1.6){ //horizontal
                     self.score = self.score + (abs(self.x) * self.multiplierHorizontal);
-                    self.movesCount+=1;
+                    self.moveOrientation = "horizontal"
                     print("horizontal")
                 }
                 if(abs(self.y)>1.6){//vertical
                     self.score = self.score + (abs(self.y) * self.multiplierVertical);
-                    self.movesCount+=1;
+                    self.moveOrientation = "vertical"
                     print("vertical")
                 }
                 
                 if(abs(self.z)>1.6){
                     self.score = self.score + (abs(self.z) * 2.0);
-                    self.movesCount+=1;
+//                    self.movesCount+=1;
                 }
             }
 
         }
-        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { timer in
             self.doubleEffect();
         }
     }
