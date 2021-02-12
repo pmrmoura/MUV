@@ -12,12 +12,14 @@ class actionRow{
     public let frontWalk = 9
     public let backWalk = 11
     public let wideArmsDanceMove = 18
+    public let shootArrow = 2
 }
 
 class actionRowLen{
     public let fronWalk = 9
     public let  backWalk = 9
     public let wideArmsDanceMove = 7
+    public let shootArrow = 13
 }
 
 class SpriteSheet {
@@ -69,10 +71,12 @@ class GameScene: SKScene {
     let columnGuide = actionRowLen()
     var previousTime = 0.0
     var sheet: SpriteSheet = SpriteSheet(texture: SKTexture(imageNamed: "AllukaFile"), rows: 21, columns: 13, spacing: 0, margin: 0)
+    
     override func didMove(to view: SKView) {
         player = self.childNode(withName: "player")!
         let texture = sheet.textureForColumn(column: 0, row: rowGuide.frontWalk)!
         player.run(SKAction.setTexture(texture))
+        player.run(SKAction.repeat(wideArmsDance(), count: 10))
         cameraNode.position.x = (self.scene?.frame.midX)!
         cameraNode.position.y = (self.scene?.frame.midY)!
         addChild(cameraNode)
@@ -82,7 +86,7 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first?.location(in: self)
         let act = SKAction.move(to: CGPoint(x: location!.x, y: self.player.position.y), duration: 0.5)
-        player.removeAllActions()
+        //player.removeAllActions()
         player.run(act)
 
         if(location!.x > self.player.position.x){
@@ -103,13 +107,13 @@ class GameScene: SKScene {
         self.player.run(SKAction.setTexture(texture))
     }
     
-    override func update(_ currentTime: TimeInterval) {
+    /*override func update(_ currentTime: TimeInterval) {
         if (self.previousTime == 0 || abs(Double(currentTime) - Double(previousTime)) >= 0.5) {
             self.previousTime = Double(currentTime)
             self.player.run(self.wideArmsDance())
             //print(self.motionManager.orientation)
         }
-    }
+    }*/
     
     func frontWalk() -> SKAction{
         var textureArray:[SKTexture] = []
@@ -146,4 +150,17 @@ class GameScene: SKScene {
         textureArray.append(texture)
         return SKAction.animate(with: textureArray, timePerFrame: 0.05)
     }
+    
+    func shootArrowDance()->SKAction{
+        var textureArray:[SKTexture] = []
+        
+        for index in 0...(columnGuide.shootArrow-1){
+            let texture = sheet.textureForColumn(column: index, row: rowGuide.shootArrow)!
+            textureArray.append(texture)
+        }
+        let texture = sheet.textureForColumn(column: 0, row: rowGuide.shootArrow)!
+        textureArray.append(texture)
+        return SKAction.animate(with: textureArray, timePerFrame: 0.05)
+    }
+
 }

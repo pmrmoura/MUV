@@ -25,12 +25,15 @@ class GameSceneLoader: ObservableObject{
 struct Game: View {
     var champion: Champion
     @ObservedObject var loader: GameSceneLoader
+    @ObservedObject var motion = MotionManager()
+    
     
     init(champion: Champion) {
         self.champion = champion
         self.loader = GameSceneLoader(spriteSheetName: champion.file)
+        
     }
-    @ObservedObject var motion = MotionManager()
+    
     
     var body: some View {
         ZStack {
@@ -41,6 +44,19 @@ struct Game: View {
             }
             VStack {
                 Text(motion.orientation == "Horizontal" ? "Mova para os lados" : "Mova para cima e para baixo")
+                    .onChange(of: motion.changeVar, perform: { value in
+                        
+                        if motion.orientation  == "Horizontal"{
+                            
+                            loader.scene.player.run(SKAction.repeat(loader.scene.wideArmsDance(), count: 10))
+                            
+                        }
+                        else{
+                            
+                            loader.scene.player.run(SKAction.repeat(loader.scene.shootArrowDance(), count: 9))
+                            
+                        }
+                    })
                     .font(.system(size: 32, weight: .medium, design: .default))
                     .foregroundColor(.white)
                     .padding(.top, 42)

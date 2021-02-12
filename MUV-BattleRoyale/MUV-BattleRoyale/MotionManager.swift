@@ -29,6 +29,7 @@ class MotionManager:ObservableObject{
     //@Published
     var moveOrientation: String = ""
     @Published var orientation: String = "Horizontal"
+    var changeVar = true
     
     init() {
         self.motionManager = CMMotionManager()
@@ -63,7 +64,7 @@ class MotionManager:ObservableObject{
     }
     func doubleEffect() -> Void {
         let randomInt = Int.random(in: 0..<2);
-        
+        changeVar.toggle()
         switch randomInt {
         case 0:
             self.orientation = "Horizontal";
